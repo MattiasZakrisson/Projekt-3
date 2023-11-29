@@ -1,3 +1,101 @@
+/* RESET */
+
 * {
     box-sizing: border-box;
 }
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* CUSTOM PROPERTIES */
+
+:root {
+    
+    /* Colors */
+    --color-dark: #323B32;
+    --color-dark-green: #226321;
+    --color-dark-brown: #633E21;
+    --color-light-green: #03B800;
+    --color-light-brown: #B84F00;
+    --color-white: #fff;
+
+    /* Fonts */
+    --font-heading: "Indivisible", sans-serif;
+    --font-text: "Bilo", sans-serif;
+    --font-size: 16px;
+    --font-scale: 1.333;
+
+    --font-size-p: calc( var(--font-size) * 1.125 );
+    --font-size-i: calc( var(--font-size) * 1.5 );
+    --font-size-h6: calc( var(--font-size) * var(--font-scale) );
+    --font-size-h5: calc( var(--font-size-h6) * var(--font-scale) );
+    --font-size-h4: calc( var(--font-size-h5) * var(--font-scale) );
+    --font-size-h3: calc( var(--font-size-h4) * var(--font-scale) );
+    --font-size-h2: calc( var(--font-size-h3) * var(--font-scale) );
+    --font-size-h1: calc( var(--font-size-h2) * var(--font-scale) );
+
+    --line-height: 1.5;
+}
+
+
+/* TYPOGRAPHY */
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-family: var(--font-heading);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+}
+
+h5 {
+    font-size: var(--font-size-h5);
+}
+
+h6 {
+    font-size: var(--font-size-h6);
+}
+
+p, 
+a, 
+li, 
+span {
+    font-family: var(--font-text);
+    font-size: var(--font-size-p);
+    line-height: var(--line-height);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* COMPONENTS */
