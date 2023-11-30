@@ -99,3 +99,67 @@ a {
 }
 
 /* COMPONENTS */
+
+
+/* Main Layout */
+body {
+    background-color: #323B32;
+}
+
+/* Header */
+.site-header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+.branding {
+    position: absolute;
+    left: 50px;
+}
+.branding img {
+    height: 55px;
+    margin-bottom: 15px;
+}
+
+.menu__list {
+    display: flex;
+    gap: 60px;
+}
+.menu__item {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-h5);
+    font-weight: 600;
+    color: var(--color-light-brown);
+}
+
+.menu__item:hover {
+    border-bottom: 5px solid rgba(184, 80, 0, 15%);
+}
+
+.menu__item--current {
+    font-weight: 800;
+    border-bottom: 5px solid rgba(184, 80, 0, 35%);
+}
+
+.menu__item--current:hover {
+    border-bottom: 5px solid rgba(184, 80, 0, 35%);
+}
+
+.menu-button {
+    position: absolute;
+    right: 50px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
+.menu-button img {
+    height: 25px;
+}
