@@ -99,7 +99,13 @@ a {
 }
 
 /* COMPONENTS */
-
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
 
 /* Main Layout */
 body {
@@ -123,7 +129,6 @@ body {
     left: 50px;
 }
 .branding img {
-    /* height: 55px; */
     width: 200px;
     margin-bottom: 25px;
 }
@@ -155,11 +160,6 @@ body {
 .menu-button {
     position: absolute;
     right: 50px;
-    border: none;
-    margin: 0;
-    padding: 0;
-    background: none;
-    cursor: pointer;
 }
 
 .menu-button img {
@@ -169,19 +169,19 @@ body {
 /* Hero */
 
 .hero {
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
-    background-image: url(assets/images/hero-bg.png);
+    background-image: url(assets/images/hero-bg.png), linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1));
+    background-blend-mode: overlay;
     background-size: cover;
     display: grid;
     grid-template-columns: minmax(165px, 1fr) [inner-start] minmax(0, 1705px) [inner-end] minmax(50px, 1fr);
+    grid-template-rows: 1fr [center-start] 1fr [center-end footer-start] 1fr [footer-end] 90px;
 }
 
 .hero__inner {
     grid-column: inner;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    grid-row: center;
 }
 
 .hero__content {
@@ -210,4 +210,25 @@ body {
     line-height: 1.5;
     color: var(--color-white);
     font-weight: 500;
+}
+
+.hero__footer {
+    grid-column: inner;
+    grid-row: footer;
+    display: flex;
+    align-items: end;
+}
+
+.hero__arrow {
+    margin-left: 120px;
+    margin-bottom: 0px;
+}
+
+.hero__social {
+    display: flex;
+    gap: 35px;
+    flex-direction: column;
+    position: absolute;
+    right: 50px;
+    bottom: 90px;
 }
