@@ -157,7 +157,7 @@ body {
     border-bottom: 5px solid rgba(184, 80, 0, 35%);
 }
 
-.menu-button {
+.menu__button {
     position: absolute;
     right: 50px;
 }
@@ -176,7 +176,7 @@ body {
     background-size: cover;
     display: grid;
     grid-template-columns: minmax(165px, 1fr) [inner-start] minmax(0, 1705px) [inner-end] minmax(50px, 1fr);
-    grid-template-rows: 1fr [center-start] 1fr [center-end footer-start] 1fr [footer-end] 90px;
+    grid-template-rows: 1fr [center-start] 1fr [center-end footer-start] 1fr [footer-end];
 }
 
 .hero__inner {
@@ -221,7 +221,12 @@ body {
 
 .hero__arrow {
     margin-left: 120px;
-    margin-bottom: 0px;
+    margin-bottom: 45px;
+}
+
+.hero__arrow button {
+    padding: 0;
+    margin: 0;
 }
 
 .hero__social {
