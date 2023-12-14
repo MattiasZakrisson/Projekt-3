@@ -124,6 +124,10 @@ body {
     z-index: 99;
 }
 
+.site-header.menu-opened .menu__list {
+    display: none;
+}
+
 .branding {
     position: absolute;
     left: 50px;
@@ -157,13 +161,69 @@ body {
     border-bottom: 5px solid rgba(184, 80, 0, 35%);
 }
 
-.menu__button {
+#menu-button {
     position: absolute;
-    right: 50px;
+    right: 55px;
+    height: 30px;
+    width: 30px;
 }
 
-.menu-button img {
-    width: 30px;
+.hamburger {
+    background-color: var(--color-light-brown);
+    height: 4px;
+    width: 40px;
+    border-radius: 2px;
+    position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: inherit;
+    left: 0;
+    top: -11px;
+    transition: top 0.2s;
+}
+
+.hamburger::after {
+    top: 11px;
+}
+
+#menu-button.close .hamburger::before,
+#menu-button.close .hamburger::after {
+    top: 0;
+}
+
+.full-menu {
+   position: fixed;
+   background-color: rgba(0, 0, 0, 0.3);
+   backdrop-filter: blur(15px);
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   z-index: 98; 
+   display: none;
+   justify-content: center;
+   align-items: center;
+}
+
+.full-menu.open {
+    display: flex;
+}
+
+.full-menu .menu__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.full-menu .menu__item {
+    font-size: var(--font-size-h5);
 }
 
 /* Hero */
@@ -238,12 +298,6 @@ body {
     bottom: 60px;
 }
 
-
-
-
-
-
-
 /* 1500 PX */
 @media screen and ( max-width: 1500px ) {
     h1 {
@@ -266,15 +320,14 @@ body {
 
 }
 
-@media screen and ( max-width: 1024px ) {
+@media screen and ( max-width: 1000px ) {
     .menu__list {
         display: none;
     }
 
-}
-
-@media screen and ( max-width: 1024px ) {
-    
+    .full-menu .menu__list {
+        display: flex;
+    }
     
     .hero__social {
         display: none;
@@ -320,7 +373,7 @@ body {
         width: 70px;
     }
 
-    .menu__button {
+    #menu-button {
         right: 25px;
     }
         
@@ -333,7 +386,7 @@ body {
         margin-bottom: 15px;
     }
 
-    .menu__button {
+    #menu-button {
         width: 30px;
     }
 }

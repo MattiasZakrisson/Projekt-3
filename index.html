@@ -8,9 +8,12 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/zzq2ixg.css">
 
-    <!-- Styles -->
+    <!-- Styles & Scripts -->
     <link rel="stylesheet" href="style.css">
+    <script src="js/menu.js" defer></script>
 </head>
+
+
 <body>
    <header class="site-header">
     <!-- Logo -->
@@ -29,11 +32,24 @@
         </nav>
 
     <!-- Button -->
-        <button class="menu__button">
-            <img src="assets/icons/icon-menu.svg" alt="Menu Button">
+        <button id="menu-button">
+            <div class="hamburger"></div>
+            <!-- <img src="assets/icons/icon-menu.svg" alt="Menu Button"> -->
         </button>
 
    </header>
+
+   <nav class="full-menu">
+        <!-- Menu -->
+        <nav class="menu">
+            <div class="menu__list">
+                <a href="" class="menu__item menu__item--current">Hem</a>
+                <a href="" class="menu__item">Butik</a>
+                <a href="" class="menu__item">Om</a>
+                <a href="" class="menu__item">Kontakt</a>
+            </div>
+        </nav>
+   </nav>
 
    <div class="hero">
         <div class="hero__inner">
